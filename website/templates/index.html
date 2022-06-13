@@ -1,0 +1,14 @@
+{% extends "base.html" %} {% block title %}Hello{% endblock %} {% block content
+  %}
+  <h1>Home Page</h1>
+  <br/><br/>
+  {%for users in values%}
+  <h4>ID:{{users.id}}
+      Username:{{users.username}} 
+      Password:{{users.password}}
+      <a href="/delete/{{users.id}}" class="btn btn-outline-danger btm-sm">Delete</a>
+  </h4>
+  <br/><br/>
+  {%endfor%}
+  <a href="/clear" class="btn btn-outline-danger btm-sm">Clear</a>
+  {% endblock %}

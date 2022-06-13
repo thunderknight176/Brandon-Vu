@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="{{ url_for('front') }}"> Home Page</a>
+    <h1>Hello {{name}}</h1>
+    {% for abouts in about%}
+    <h2>Name:{{abouts.name}}</h2>
+    <h3>Author:{{abouts.writer}}</h3>
+    {%endfor%}
+</body>
+</html>
